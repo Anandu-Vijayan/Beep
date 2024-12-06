@@ -5,11 +5,11 @@ import {config} from "dotenv";
 config();
 
 cloudinary.config({
-    cloud_name: process.env.CLOUDINAR_CLOUD_NAME,
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET,
-    // secure: true,
-    // url: "https://res.cloudinary.com/dps123456/image/upload",
+    secure: true,
+    url: process.env.CLOUDINARY_API_SECRET_URL,
 })
 
 export default cloudinary;
